@@ -1,0 +1,8 @@
+<h1>Preguntas disponibles</h1>
+
+<% if @questions %>
+	<% @questions.each do  |q| %>
+		<%= link_to "#{q.question}", question_path(q) %>
+		-<i><span style="color:#0147FA"><%= User.find(q.author_id).name %></span></i><br><br>
+	<% end %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Iniciar sesión</h1>
+
+<form action="/" method="get">
+	<input class="btn" type="submit" value="Regresar">
+</form>
+<br>
+
+<%= form_for :sessions, as: :post, url: '/login' do |f| %>
+ <%= f.text_field :username, class: 'input_box', placeholder: 'Usuario' %><br><br>
+ <%= f.text_field :password, class: 'input_box', type: "password", placeholder: 'Contraseña' %><br><br>
+
+ <%= f.submit "Iniciar sesión" %> 
+<% end %>
+
+<p id="error"><%= flash[:danger] %></p>
+<% flash[:danger] = nil %>
+

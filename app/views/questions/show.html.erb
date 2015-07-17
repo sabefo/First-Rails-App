@@ -1,0 +1,14 @@
+<h1>Respuestas a la pregunta <%= @question.question %></h1>
+
+<%= form_for(@answer) do |f| %>
+ <%= f.label :answer, "Escribe una respuesta:" %><br><br>
+ <%= f.text_area :answer, size: "50x5" %><br><br>
+ <%= f.submit "Crear respuesta" %>
+<% end %>
+
+<% if @answers %>
+	<% @answers.each do  |a| %>
+	<p>	<%= a.answer %>
+	-<i><span style="color:#0147FA"><%= User.find(a.respond_id).name %></span></i><br><br>
+	<% end %>
+<% end %>

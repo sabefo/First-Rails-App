@@ -1,0 +1,48 @@
+.container {
+  margin: 20px auto;
+  /*width: 600px;*/
+  padding: 0px 20px 20px 20px;
+  /*border: 1px dotted black;*/
+  text-align: center;
+  background-color: #B2B2FF;
+}
+
+th {
+  text-align: left;
+}
+
+#error {
+	color: red;
+	font-weight: bold;
+}
+
+#initiate {
+	display: block;
+}
+
+#f_sign_in {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.input_box {
+	border: 2px solid;
+	border-color: #7F7FFF;
+	border-radius: 5px;
+}
+
+.btn {
+	border-radius: 1px;
+}
+
+
+
+
+
+
+
+
+

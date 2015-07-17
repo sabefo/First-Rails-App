@@ -1,0 +1,8 @@
+<h1>Aquí puedes crear una pregunta</h1>
+
+<%= form_for(@question) do |f| %>
+	<%= f.label :question, "Pregunta"%><br><br>
+	<%= f.text_area :question, size: "50x5" %><br><br>
+	<%= f.submit "Crear pregunta" %>
+<% end %>
+

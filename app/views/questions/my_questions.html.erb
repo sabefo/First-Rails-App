@@ -1,0 +1,9 @@
+<h1>Tus Preguntas</h1>
+
+<% if @questions %>
+	<% @questions.each do  |q| %>
+		<%= link_to "#{q.question}", question_path(q) %><br><br>
+	<% end %>
+<% end %>
+
+<%= link_to 'Crear pregunta', new_question_path %>

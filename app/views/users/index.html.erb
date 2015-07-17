@@ -1,0 +1,14 @@
+<h1>Bienvenido a Quora!</h1>
+<%= form_for(@user) do |f| %>
+ <%= f.text_field :name, class: 'input_box', placeholder: 'Nombre'%><br><br>
+ <%= f.text_field :username, class: 'input_box', placeholder: 'Usuario' %><br><br>
+ <%= f.text_field :password, class: 'input_box', type: "password", placeholder: 'Password' %><br><br>
+
+ <%= f.submit "Crear cuenta" %> 
+<!-- class: 'btn' -->
+<% end %>
+<br>
+<%= link_to 'Log In', login_form_path %>
+
+<p id="error"><%= flash[:danger] %></p>
+<% flash[:danger] = nil %>
